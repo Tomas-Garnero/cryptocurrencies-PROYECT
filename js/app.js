@@ -98,14 +98,14 @@ async function consultarAPI() {
     //     .then(resultado => {
     //         mostrarCotizacionHTML(resultado.DISPLAY[criptomoneda][moneda]);
     //     })
-
+    //
     try {
         const respuesta = await fetch(url);
         const resultado = await respuesta.json();
         mostrarCotizacionHTML(resultado.DISPLAY[criptomoneda][moneda]);
     } catch (error) {
         console.log(error);
-    }
+    } 
 }
 
 function mostrarCotizacionHTML(cotizacion) {
